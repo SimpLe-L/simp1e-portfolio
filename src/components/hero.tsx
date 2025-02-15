@@ -2,7 +2,7 @@
 
 import { SlideIn, Transition } from "./ui/Transitions";
 import LoadingWrapper from "./loading-wrapper";
-import { aboutInfo } from "@/temp";
+import { aboutInfo } from "@/configs/website";
 import { TypeIntro } from "./intro-comp";
 import IntroScrollMouse from "./mouse-scroll";
 

@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 import { OpacityTextReveal, SlideIn, Transition } from "./ui/Transitions";
-import { aboutInfo as about } from "@/temp";
+import { aboutInfo as about } from "@/configs/website";
 import { SlideLeft } from "@/lib/utils";
 
 const skillsArr = [

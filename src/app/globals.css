@@ -66,7 +66,7 @@ html {
 }
 
 .blob {
-  background: conic-gradient(from 2.35rad, #c76000, rgba(7, 29, 228, 0.5));
+  background: conic-gradient(from 2.35rad, #f25f4c, rgba(7, 29, 228, 0.5));
 }
 
 .text-reveal {
@@ -81,16 +81,4 @@ html {
   background-position: right bottom;
   color: transparent;
   background-repeat: no-repeat;
-}
-
-#textone {
-  z-index: 6;
-  clip-path: polygon(0 0, 18% 0%, 8% 100%, 0% 100%);
-  /* background-color: green; */
-}
-
-#texttwo {
-  z-index: 4;
-  clip-path: polygon(0 0, 91% 0%, 81% 100%, 0% 100%);
-  /* background-color: aqua; */
 }
