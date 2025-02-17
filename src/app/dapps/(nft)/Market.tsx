@@ -1,6 +1,6 @@
 
 
-import { nftAddress } from "@/configs";
+import { nftAddress } from "@/configs/adresses";
 import { useToast } from "@/hooks/use-toast";
 import { useReadContract, useWriteContract, type BaseError } from "wagmi";
 import { nftMarketABI } from "@/abis/nftMarket";

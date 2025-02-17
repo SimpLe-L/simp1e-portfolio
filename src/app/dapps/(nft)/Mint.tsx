@@ -1,7 +1,7 @@
 "use client"
 
 import { useWriteContract, useReadContract, useWaitForTransactionReceipt, type BaseError } from 'wagmi';
-import { mintAddress, nftAddress } from '@/configs';
+import { mintAddress, nftAddress } from '@/configs/adresses';
 import { useState } from 'react';
 
 import { NFTCard } from './MintCard';
@@ -210,12 +210,12 @@ const MintPage = ({ address, changePlace }: IProps) => {
         isLoading && <Loader />
       } */}
       <div className="w-full flex justify-center gap-2">
-        <Button className='bg-[--button-bg] text-[--basic-text] hover:bg-[--button-bg]' onClick={MintNFT}>
+        <Button title='点击mint' className='bg-[--button-bg] text-[--basic-text] hover:bg-[--button-bg]' onClick={MintNFT}>
           {
             mintStatus ? "进行中..." : "MINT"
           }
         </Button>
-        <Button className='bg-[--button-bg] text-[--basic-text] hover:bg-[--button-bg]' onClick={CombineNFTs}>
+        <Button title='两张同等级nft进行合成' className='bg-[--button-bg] text-[--basic-text] hover:bg-[--button-bg]' onClick={CombineNFTs}>
 
           {combineStatus ? "进行中..." : "合成"}
         </Button>

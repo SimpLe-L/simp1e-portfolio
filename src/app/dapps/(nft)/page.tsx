@@ -2,14 +2,13 @@
 
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
-
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import MintComp from './Mint'
 import MarketComp from './Market'
 
 const NftPage = () => {
+
   const { address } = useAccount();
   const [isMine, setIsMain] = useState(true);
 
@@ -17,18 +16,30 @@ const NftPage = () => {
     setIsMain(!isMine);
   }
 
+  const [tabDefault, setTabValue] = useState('mine');
+  const changeTab = (value: string) => {
+    setTabValue(value);
+  };
+
   return (
-    <div className='flex flex-col p-5 gap-4 h-full'>
-      <div className='w-full flex gap-2 justify-center'>
-        <ConnectButton />
-        <Button className='bg-[--button-bg] text-[--basic-text] hover:bg-[--button-bg]' onClick={changePlace}>{isMine ? '市场' : '我的'}</Button>
-      </div>
-      <div className='flex-[1] overflow-y-auto'>
-        {
-          isMine ? <MintComp address={address} changePlace={changePlace} /> : <MarketComp address={address} />
-        }
-      </div>
-    </div>
+    <Tabs
+      value={tabDefault}
+      onValueChange={changeTab}
+      className="w-full h-full flex flex-col items-center py-3"
+    >
+      <TabsList
+        className={"grid w-[140px] grid-cols-2 bg-[--card-bg]"}
+      >
+        <TabsTrigger value="mine">我的</TabsTrigger>
+        <TabsTrigger value="market">市场</TabsTrigger>
+      </TabsList>
+      <TabsContent value="mine" className="w-full h-full px-5">
+        <MintComp address={address} changePlace={changePlace} />
+      </TabsContent>
+      <TabsContent value="market" className="w-full h-full px-5">
+        <MarketComp address={address} />
+      </TabsContent>
+    </Tabs>
   );
 };
 

@@ -1,0 +1,1 @@
+export const CRYPTOCOMPARE_API_KEY = process.env.CRYPTOCOMPARE_API_KEY!;

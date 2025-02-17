@@ -9,7 +9,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { uniswapV2Pair, uniswapV2Router02, approveABI } from '@/abis/uniswap';
 import { useAccount, useWriteContract, BaseError } from 'wagmi';
 import { parseUnits } from 'ethers';
-import { uniswapV2Router02Address } from '@/configs';
+import { uniswapV2Router02Address } from '@/configs/adresses';
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'viem/chains';
 import { Input } from '@/components/ui/input';

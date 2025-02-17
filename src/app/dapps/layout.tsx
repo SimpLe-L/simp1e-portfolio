@@ -1,4 +1,5 @@
 import AsideComponent from "@/components/aside-comp";
+import ConnectBtn from "@/components/connect-btn";
 
 const menuList = [
   {
@@ -6,11 +7,19 @@ const menuList = [
     list: [
       {
         title: "NFT",
-        path: "/dapps/nft",
+        path: "/dapps",
       },
       {
-        title: "swap demo",
+        title: "Crypto Dashboard",
+        path: "/dapps/crypto",
+      },
+      {
+        title: "Swap Demo",
         path: "/dapps/swap",
+      },
+      {
+        title: "Carbon Miner",
+        path: "/dapps/hackthon"
       }
     ]
   }
@@ -22,13 +31,20 @@ const DappsLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="h-screen grid grid-cols-4 pt-24">
-      <div className="col-span-1">
-        <AsideComponent menuList={menuList} />
+    <div className="h-screen flex flex-col">
+      <div className="h-24 flex px-6 justify-between items-center border-b border-[--split-line]">
+        <div className="">返回</div>
+        <ConnectBtn />
       </div>
-      <div className="col-span-3">
-        {children}
-      </div>
+      <main className="flex-1 grid grid-cols-5">
+        <div className="col-span-1">
+          <AsideComponent menuList={menuList} />
+        </div>
+        <div className="col-span-4">
+          {children}
+        </div>
+      </main>
+
     </div>
   )
 }

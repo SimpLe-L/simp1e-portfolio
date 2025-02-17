@@ -1,5 +1,3 @@
-
-
 const IntroScrollMouse = () => {
   return (
     <div className="relative grid h-[30px] w-[20px] justify-center rounded-full opacity-40 border-2 pt-2 md:h-[38px] md:w-[26px]">

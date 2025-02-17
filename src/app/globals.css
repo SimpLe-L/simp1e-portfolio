@@ -82,3 +82,12 @@ html {
   color: transparent;
   background-repeat: no-repeat;
 }
+
+:root {
+  --card-bg: #16161a;
+  --basic-text: #fffffe;
+  --secondry-text: #94a1b2;
+  --split-line: hsla(214, 8%, 33%, 0.582);
+  --basic-bg: #242629;
+  --button-bg: #a162f7;
+}

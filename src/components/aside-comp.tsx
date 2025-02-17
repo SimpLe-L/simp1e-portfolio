@@ -3,7 +3,7 @@ import MenuItem from "./menu-item";
 
 const SideBar = ({ menuList }: { menuList: IMenu[] }) => {
   return (
-    <div className="p-[20px] h-full border-solid border-r">
+    <div className="p-[20px] h-full border-r border-[--split-line]">
       <div>
         {menuList.map((menu) => (
           <div key={menu.menuName} className="flex flex-col gap-2">

@@ -12,7 +12,6 @@ import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogT
 import { Button } from "@/components/ui/button";
 import { ChangeEvent, useState } from "react";
 import { Input } from "@/components/ui/input";
-// import { parseUnits } from 'viem'
 
 interface ICardProp {
   data: INftProperties,

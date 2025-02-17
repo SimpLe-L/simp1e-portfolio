@@ -70,7 +70,7 @@ const Navbar = () => {
         {navLinks.map((item, idx) => (
           <Link href={item.href} key={idx}>
             <DockItem
-              className={cn("aspect-square rounded-full bg-gray-200 dark:bg-neutral-800", pathname === item.href && " bg-gray-100 !border !border-primary-sky")}
+              className={cn("aspect-square rounded-full bg-gray-200 dark:bg-neutral-800", pathname === item.href && "bg-gray-100 !border !border-primary-sky")}
             >
               <DockLabel >{item.title}</DockLabel>
               <DockIcon className={cn(pathname === item.href && "text-[#2f7df4]")}>{item.icon}</DockIcon>
